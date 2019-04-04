@@ -6,7 +6,7 @@ import 'SimpleDialogDemo.dart';
 import 'ChipDemo.dart';
 import 'DataTableDemo.dart';
 import 'StepperDemo.dart';
-
+import 'state/state_management_demo.dart';
 void main() => runApp(MyApp());
 
 final ThemeData kDefaultTheme = new ThemeData(
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
         '/PaginatedDataTableDemo':(context) => PaginatedDataTableDemo(),
         '/CardDemo':(context) => CardDemo(),
         '/StepperDemo':(context) => StepperDemo(),
+        '/StateManagementDemo':(context) => StateManagementDemo(),
       },
     );
     return materialApp;
@@ -181,6 +182,15 @@ class Defalut extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushNamed('/StepperDemo');
+              },
+            ),
+            ListTile(
+              title: Text(
+                'StateManagementDemo',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed('/StateManagementDemo');
               },
             ),
           ],

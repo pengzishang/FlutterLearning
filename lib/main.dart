@@ -7,6 +7,7 @@ import 'ChipDemo.dart';
 import 'DataTableDemo.dart';
 import 'StepperDemo.dart';
 import 'state/state_management_demo.dart';
+import 'stream/stream_demo.dart';
 void main() => runApp(MyApp());
 
 final ThemeData kDefaultTheme = new ThemeData(
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         '/CardDemo':(context) => CardDemo(),
         '/StepperDemo':(context) => StepperDemo(),
         '/StateManagementDemo':(context) => StateManagementDemo(),
+        '/StreamDemo':(context) => StreamDemo(),
       },
     );
     return materialApp;
@@ -191,6 +193,15 @@ class Defalut extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushNamed('/StateManagementDemo');
+              },
+            ),
+            ListTile(
+              title: Text(
+                'StreamDemo',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed('/StreamDemo');
               },
             ),
           ],

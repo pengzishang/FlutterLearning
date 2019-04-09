@@ -8,6 +8,7 @@ import 'DataTableDemo.dart';
 import 'StepperDemo.dart';
 import 'state/state_management_demo.dart';
 import 'stream/stream_demo.dart';
+import 'rxdart/rxdart_demo.dart';
 void main() => runApp(MyApp());
 
 final ThemeData kDefaultTheme = new ThemeData(
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         '/StepperDemo':(context) => StepperDemo(),
         '/StateManagementDemo':(context) => StateManagementDemo(),
         '/StreamDemo':(context) => StreamDemo(),
+        '/RxDartDemo':(context) => RxDartDemo(),
       },
     );
     return materialApp;
@@ -202,6 +204,15 @@ class Defalut extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushNamed('/StreamDemo');
+              },
+            ),
+            ListTile(
+              title: Text(
+                'RxDartDemo',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed('/RxDartDemo');
               },
             ),
           ],

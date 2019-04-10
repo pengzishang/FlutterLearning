@@ -10,7 +10,7 @@ import 'state/state_management_demo.dart';
 import 'stream/stream_demo.dart';
 import 'rxdart/rxdart_demo.dart';
 import 'bloc/bloc_demo.dart';
-
+import 'http/http_demo.dart';
 void main() => runApp(MyApp());
 
 final ThemeData kDefaultTheme = new ThemeData(
@@ -54,6 +54,7 @@ class MyApp extends StatelessWidget {
         '/StreamDemo': (context) => StreamDemo(),
         '/RxDartDemo': (context) => RxDartDemo(),
         '/BlocDemo': (context) => BlocDemo(),
+        '/HttpDemo': (context)=> HttpDemo()
       },
     );
     return materialApp;
@@ -225,6 +226,15 @@ class Defalut extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushNamed('/BlocDemo');
+              },
+            ),
+            ListTile(
+              title: Text(
+                'HttpDemo',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed('/HttpDemo');
               },
             ),
           ],

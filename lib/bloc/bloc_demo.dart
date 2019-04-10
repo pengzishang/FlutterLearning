@@ -55,7 +55,7 @@ class CounterBloc {
 //    });
 //  }
 
-  void dispose(){
+  void dispose() {
     counterActionController.close();
 //    counterController.close();
   }
@@ -64,5 +64,4 @@ class CounterBloc {
     _countValue += value;
     counterActionController.sink.add(_countValue);
   }
-
 }

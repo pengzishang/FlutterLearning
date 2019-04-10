@@ -9,6 +9,8 @@ import 'StepperDemo.dart';
 import 'state/state_management_demo.dart';
 import 'stream/stream_demo.dart';
 import 'rxdart/rxdart_demo.dart';
+import 'bloc/bloc_demo.dart';
+
 void main() => runApp(MyApp());
 
 final ThemeData kDefaultTheme = new ThemeData(
@@ -40,17 +42,18 @@ class MyApp extends StatelessWidget {
         "/DateDemo": (context) => DateTimeDemo(),
         '/SimpleDialogDemo': (context) => SimpleDialogDemo(),
         '/AlertDialogDemo': (context) => AlertDialogDemo(),
-        '/BottomSheetDemoState' : (context) => BottomSheetDemo(),
-        '/SnackBarButton':(context) => SnackBarButton(),
-        '/ExpansionPannelDemo':(context)=>ExpansionPannelDemo(),
-        '/ChipDemo':(context) => ChipDemo(),
-        '/DataTableDemo':(context) => DataTableDemo(),
-        '/PaginatedDataTableDemo':(context) => PaginatedDataTableDemo(),
-        '/CardDemo':(context) => CardDemo(),
-        '/StepperDemo':(context) => StepperDemo(),
-        '/StateManagementDemo':(context) => StateManagementDemo(),
-        '/StreamDemo':(context) => StreamDemo(),
-        '/RxDartDemo':(context) => RxDartDemo(),
+        '/BottomSheetDemoState': (context) => BottomSheetDemo(),
+        '/SnackBarButton': (context) => SnackBarButton(),
+        '/ExpansionPannelDemo': (context) => ExpansionPannelDemo(),
+        '/ChipDemo': (context) => ChipDemo(),
+        '/DataTableDemo': (context) => DataTableDemo(),
+        '/PaginatedDataTableDemo': (context) => PaginatedDataTableDemo(),
+        '/CardDemo': (context) => CardDemo(),
+        '/StepperDemo': (context) => StepperDemo(),
+        '/StateManagementDemo': (context) => StateManagementDemo(),
+        '/StreamDemo': (context) => StreamDemo(),
+        '/RxDartDemo': (context) => RxDartDemo(),
+        '/BlocDemo': (context) => BlocDemo(),
       },
     );
     return materialApp;
@@ -213,6 +216,15 @@ class Defalut extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushNamed('/RxDartDemo');
+              },
+            ),
+            ListTile(
+              title: Text(
+                'BlocDemo',
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed('/BlocDemo');
               },
             ),
           ],
